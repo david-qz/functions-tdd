@@ -11,6 +11,7 @@ import {
     constructPet,
     sumLoop,
     sumClosed,
+    arrayWrap,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -262,6 +263,10 @@ test('sumClosed(): integer parameter', expect => {
 
     Uses: array literal syntax, deepEqual assertion 
 */
+
+test('arrayWrap(): three parameters', expect => {
+    expect.deepEqual(arrayWrap('felix', 'fido', 'alex'), ['felix', 'fido', 'alex']);
+});
 
 /*
     Write a function that takes an array of pet types ('cat', 'dog', 'bird')

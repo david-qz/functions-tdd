@@ -79,3 +79,7 @@ export function sumLoop(n) {
 export function sumClosed(n) {
     return n * (n + 1) / 2;
 }
+
+export function arrayWrap(a, b, c) {
+    return [a, b, c];
+}
