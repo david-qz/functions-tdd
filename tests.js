@@ -13,6 +13,7 @@ import {
     sumClosed,
     arrayWrap,
     countCats,
+    countType,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -291,6 +292,14 @@ test('countCats(): small array', expect => {
 
     Uses: let variable with reassignment, math operator, for...of loop, if control flow
 */
+
+test('countType(): small array', expect => {
+    expect.equal(countType(['cat', 'dog', 'bird', 'cat', 'cat'], 'cat'), 3);
+});
+
+test('countType(): small array', expect => {
+    expect.equal(countType(['cat', 'dog', 'bird', 'cat', 'cat'], 'bird'), 1);
+});
 
 /*
     Write a function takes in a month as input (represented as a 
