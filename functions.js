@@ -65,3 +65,17 @@ export function constructPet(name, type, age, food, toys) {
         toys: toys,
     };
 }
+
+// What the prompt is asking for.
+export function sumLoop(n) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+// A closed form for this particular sum.
+export function sumClosed(n) {
+    return n * (n + 1) / 2;
+}

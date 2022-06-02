@@ -9,6 +9,8 @@ import {
     rockPaperScissors,
     fullName,
     constructPet,
+    sumLoop,
+    sumClosed,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -240,6 +242,17 @@ test('constructPet(): all parameters', expect => {
 
     Uses: let variable with reassignment, math operator, for...i loop
 */
+
+test('sumLoop(): integer parameter', expect => {
+    expect.equal(sumLoop(4), 10);
+});
+
+// Test my closed form too
+test('sumClosed(): integer parameter', expect => {
+    expect.equal(sumClosed(4), 10);
+    // For Gauss
+    expect.equal(sumClosed(100), 5050);
+});
 
 /*
     Write a function that takes name of three pets
