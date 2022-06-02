@@ -91,3 +91,11 @@ export function countCats(list) {
     }
     return count;
 }
+
+export function countType(list, type) {
+    let count = 0;
+    for (const animal of list) {
+        if (animal === type) count++;
+    }
+    return count;
+}
