@@ -14,3 +14,7 @@ export function minutesToSeconds(minutes) {
 export function triangleArea(base, height) {
     return (base * height) / 2;
 }
+
+export function sumThreshold(x, y) {
+    return x + y <= 100 ? true : false;
+}
