@@ -3,6 +3,7 @@ import {
     add,
     sub,
     minutesToSeconds,
+    triangleArea,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -77,6 +78,16 @@ test('minutesToSeconds(): integral minutes', expect => {
 
     Uses: Math operator(s)
 */
+
+test('triangleArea(): integral base and height', expect => {
+    const base = 5;
+    const height = 10;
+    const expected = 25;
+
+    const actual = triangleArea(base, height);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes in two 2 numbers
