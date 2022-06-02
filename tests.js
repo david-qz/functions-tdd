@@ -2,6 +2,7 @@
 import {
     add,
     sub,
+    minutesToSeconds,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -58,6 +59,15 @@ test('sub(): two integers', expect => {
 
     Uses: Math operator(s)
 */
+
+test('minutesToSeconds(): integral minutes', expect => {
+    const minutes = 10;
+    const expected = 600;
+
+    const actual = minutesToSeconds(minutes);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes in the base and height
