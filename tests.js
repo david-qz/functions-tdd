@@ -4,6 +4,7 @@ import {
     sub,
     minutesToSeconds,
     triangleArea,
+    sumThreshold,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -100,6 +101,38 @@ test('triangleArea(): integral base and height', expect => {
 
     Uses: Comparison operator(s), if/else control flow
 */
+
+test('sumThreshold(): under threshold', expect => {
+    const x = 25;
+    const y = 13;
+    const expected = true;
+
+    const actual = sumThreshold(x, y);
+
+    expect.equal(actual, expected);
+});
+
+test('sumThreshold(): above threshold', expect => {
+    const x = 88;
+    const y = 60;
+    const expected = false;
+
+    const actual = sumThreshold(x, y);
+
+    expect.equal(actual, expected);
+});
+
+// The prompt doesn't cover this case, but we need it to be exhaustive. So, I'm going
+// to decide that the threshold should be inclusive.
+test('sumThreshold(): equals threshold', expect => {
+    const x = 45;
+    const y = 55;
+    const expected = true;
+
+    const actual = sumThreshold(x, y);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes a number and
