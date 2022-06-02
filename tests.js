@@ -6,6 +6,7 @@ import {
     triangleArea,
     sumThreshold,
     parity,
+    rockPaperScissors,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -167,6 +168,18 @@ test('parity(): even integer', expect => {
 
     Uses: comparison operator, if/else control flow
 */
+
+test('rockPaperScissors(): player 1 wins', expect => {
+    expect.equal(rockPaperScissors('rock', 'scissors'), 'player 1');
+});
+
+test('rockPaperScissors(): player 2 wins', expect => {
+    expect.equal(rockPaperScissors('rock', 'paper'), 'player 2');
+});
+
+test('rockPaperScissors(): draw', expect => {
+    expect.equal(rockPaperScissors('rock', 'rock'), 'draw');
+});
 
 /* 
     Write a function that takes in a first, last, and a third optional
