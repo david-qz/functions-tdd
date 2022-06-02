@@ -14,6 +14,7 @@ import {
     arrayWrap,
     countCats,
     countType,
+    daysInMonth,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -320,3 +321,32 @@ test('countType(): small array', expect => {
     number of days for Feb. The default value for the year should be
     the current year
 */
+
+test('daysInMonth(): January', expect => {
+    expect.equal(daysInMonth(1), 31);
+});
+
+test('daysInMonth(): February', expect => {
+    expect.equal(daysInMonth(2), 28);
+});
+
+
+test('daysInMonth(): April', expect => {
+    expect.equal(daysInMonth(4), 30);
+});
+
+test('daysInMonth(): out of range', expect => {
+    expect.throws(() => daysInMonth(13));
+});
+
+test('daysInMonth(): leap year, common multiple of 4', expect => {
+    expect.equal(daysInMonth(2, 2020), 29);
+});
+
+test('daysInMonth(): non-leap year by multiple of 100 exception', expect => {
+    expect.equal(daysInMonth(2, 1900), 28);
+});
+
+test('daysInMonth(): leap year by multiple of 400 exception', expect => {
+    expect.equal(daysInMonth(2, 2000), 29);
+});
