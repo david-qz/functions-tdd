@@ -55,3 +55,13 @@ export function fullName(first, last, middle) {
     const sequence = middle ? [first, middle, last] : [first, last];
     return sequence.join(' ');
 }
+
+export function constructPet(name, type, age, food, toys) {
+    return {
+        name: name,
+        type: type,
+        age: age,
+        food: food,
+        toys: toys,
+    };
+}
