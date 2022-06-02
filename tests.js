@@ -8,6 +8,7 @@ import {
     parity,
     rockPaperScissors,
     fullName,
+    constructPet,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -215,6 +216,21 @@ test('fullName(): first, last, and middle', expect => {
 
     Uses: object literal syntax, deepEqual assertion
 */
+
+test('constructPet(): all parameters', expect => {
+    const toys = ['feather chaser', 'laser pointer', 'ball of yarn'];
+
+    expect.deepEqual(
+        constructPet('felix', 'cat', 6, 'tuna', toys),
+        {
+            name: 'felix',
+            type: 'cat',
+            age: 6,
+            food: 'tuna',
+            toys: ['feather chaser', 'laser pointer', 'ball of yarn']
+        }
+    );
+});
 
 /*
     Write a function that takes a number
