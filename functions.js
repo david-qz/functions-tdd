@@ -50,3 +50,8 @@ const rockPaperScissorsLookup = {
 export function rockPaperScissors(player1Throw, player2Throw) {
     return rockPaperScissorsLookup[player1Throw][player2Throw];
 }
+
+export function fullName(first, last, middle) {
+    const sequence = middle ? [first, middle, last] : [first, last];
+    return sequence.join(' ');
+}

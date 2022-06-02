@@ -7,6 +7,7 @@ import {
     sumThreshold,
     parity,
     rockPaperScissors,
+    fullName,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -191,6 +192,14 @@ test('rockPaperScissors(): draw', expect => {
     Uses: let variable with reassignment, string concatenation, 
     existence comparison operator, if control flow
 */
+
+test('fullName(): first and last', expect => {
+    expect.equal(fullName('Ruth', 'Ginsburg'), 'Ruth Ginsburg');
+});
+
+test('fullName(): first, last, and middle', expect => {
+    expect.equal(fullName('Ruth', 'Ginsburg', 'Bader'), 'Ruth Bader Ginsburg');
+});
 
 /* 
     Write a function that takes a name, type, age, food, and a toys array
