@@ -83,3 +83,11 @@ export function sumClosed(n) {
 export function arrayWrap(a, b, c) {
     return [a, b, c];
 }
+
+export function countCats(list) {
+    let count = 0;
+    for (const animal of list) {
+        if (animal === 'cat') count++;
+    }
+    return count;
+}

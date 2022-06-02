@@ -12,6 +12,7 @@ import {
     sumLoop,
     sumClosed,
     arrayWrap,
+    countCats,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -276,6 +277,10 @@ test('arrayWrap(): three parameters', expect => {
 
     Uses: let variable with reassignment, math operator, for...of loop
 */
+
+test('countCats(): small array', expect => {
+    expect.equal(countCats(['cat', 'dog', 'bird', 'cat', 'cat']), 3);
+});
 
 /*
     BONUS: Write a function that takes an array of pet types ('cat', 'dog', 'bird')
