@@ -14,7 +14,7 @@ const test = QUnit.test;
     Uses: Math operator
 */
 
-test('adds two numbers', (expect) => {
+test('add(): two integers', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const x = 2;
