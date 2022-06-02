@@ -5,6 +5,7 @@ import {
     minutesToSeconds,
     triangleArea,
     sumThreshold,
+    parity,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -143,6 +144,14 @@ test('sumThreshold(): equals threshold', expect => {
 
     Uses: modulo operator (remainder), comparison operator, if/else control flow
 */
+
+test('parity(): odd integer', expect => {
+    expect.equal(parity(3), 'odd');
+});
+
+test('parity(): even integer', expect => {
+    expect.equal(parity(6), 'even');
+});
 
 /* 
     Write a function that takes two rock-paper-scissors throws

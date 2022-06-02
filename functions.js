@@ -18,3 +18,7 @@ export function triangleArea(base, height) {
 export function sumThreshold(x, y) {
     return x + y <= 100 ? true : false;
 }
+
+export function parity(n) {
+    return n % 2 === 0 ? 'even' : 'odd';
+}
